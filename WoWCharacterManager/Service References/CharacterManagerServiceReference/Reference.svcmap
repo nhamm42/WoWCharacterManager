@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="51b1cd04-f9db-40ed-8951-f2d3c7e081bc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:63064/CharacterManagerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CharacterManagerService.wsdl" MetadataType="Wsdl" ID="6ebe43a1-107c-4afa-ae30-042ae5278e82" SourceId="1" SourceUrl="http://localhost:63064/CharacterManagerService.svc?wsdl" />
+    <MetadataFile FileName="CharacterManagerService2.xsd" MetadataType="Schema" ID="17c9d94f-87b1-4bc0-950b-0cba50516ad3" SourceId="1" SourceUrl="http://localhost:63064/CharacterManagerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CharacterManagerService.xsd" MetadataType="Schema" ID="e2ad36e5-97af-4e28-afb0-b9be1311d108" SourceId="1" SourceUrl="http://localhost:63064/CharacterManagerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CharacterManagerService3.xsd" MetadataType="Schema" ID="fd3968cc-550e-4d84-bb9c-7107c478ede8" SourceId="1" SourceUrl="http://localhost:63064/CharacterManagerService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CharacterManagerService1.xsd" MetadataType="Schema" ID="fd6e5ba7-e775-4d64-92af-94ef82516b0d" SourceId="1" SourceUrl="http://localhost:63064/CharacterManagerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CharacterManagerService.disco" MetadataType="Disco" ID="9991ca5f-917d-4ec8-af1d-471d752335cf" SourceId="1" SourceUrl="http://localhost:63064/CharacterManagerService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
