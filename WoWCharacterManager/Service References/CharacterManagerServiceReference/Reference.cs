@@ -44,6 +44,12 @@ namespace WoWCharacterManager.CharacterManagerServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICharacterManagerService/GetClasses", ReplyAction="http://tempuri.org/ICharacterManagerService/GetClassesResponse")]
         System.Threading.Tasks.Task<CharacterManagerService.Models.Class[]> GetClassesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICharacterManagerService/SubmitCharacterData", ReplyAction="http://tempuri.org/ICharacterManagerService/SubmitCharacterDataResponse")]
+        CharacterManagerService.Models.CharacterData[] SubmitCharacterData(CharacterManagerService.Models.CharacterData submitCharacter);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICharacterManagerService/SubmitCharacterData", ReplyAction="http://tempuri.org/ICharacterManagerService/SubmitCharacterDataResponse")]
+        System.Threading.Tasks.Task<CharacterManagerService.Models.CharacterData[]> SubmitCharacterDataAsync(CharacterManagerService.Models.CharacterData submitCharacter);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -111,6 +117,14 @@ namespace WoWCharacterManager.CharacterManagerServiceReference {
         
         public System.Threading.Tasks.Task<CharacterManagerService.Models.Class[]> GetClassesAsync() {
             return base.Channel.GetClassesAsync();
+        }
+        
+        public CharacterManagerService.Models.CharacterData[] SubmitCharacterData(CharacterManagerService.Models.CharacterData submitCharacter) {
+            return base.Channel.SubmitCharacterData(submitCharacter);
+        }
+        
+        public System.Threading.Tasks.Task<CharacterManagerService.Models.CharacterData[]> SubmitCharacterDataAsync(CharacterManagerService.Models.CharacterData submitCharacter) {
+            return base.Channel.SubmitCharacterDataAsync(submitCharacter);
         }
     }
 }

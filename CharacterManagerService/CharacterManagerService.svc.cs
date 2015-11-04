@@ -11,6 +11,8 @@ namespace CharacterManagerService
             return string.Format("You entered: {0}", value);
         }
 
+        private readonly List<CharacterData> _characterList = new List<CharacterData>(); 
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)
@@ -185,6 +187,13 @@ namespace CharacterManagerService
                 }
             };
             return classes;
+        }
+
+        public List<CharacterData> SubmitCharacterData(CharacterData submitCharacter)
+        {
+            _characterList.Add(submitCharacter);
+
+            return _characterList;
         }
     }
 }

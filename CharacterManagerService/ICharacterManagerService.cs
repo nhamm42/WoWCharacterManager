@@ -23,6 +23,9 @@ namespace CharacterManagerService
 
         [OperationContract]
         List<Class> GetClasses();
+
+        [OperationContract]
+        List<CharacterData> SubmitCharacterData(CharacterData submitCharacter);
     }
 
 

@@ -63,6 +63,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\CharacterData.cs" />
     <Compile Include="Models\Class.cs" />
     <Compile Include="Models\Faction.cs" />
     <Compile Include="Models\Race.cs" />

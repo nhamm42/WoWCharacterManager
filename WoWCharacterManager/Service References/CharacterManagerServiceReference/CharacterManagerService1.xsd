@@ -66,4 +66,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SubmitCharacterData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/CharacterManagerService.Models" minOccurs="0" name="submitCharacter" nillable="true" type="q6:CharacterData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubmitCharacterDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/CharacterManagerService.Models" minOccurs="0" name="SubmitCharacterDataResult" nillable="true" type="q7:ArrayOfCharacterData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -17,10 +17,10 @@
         </Grid.ColumnDefinitions>
         <!--Name-->
         <Label Name="CharacterNameLabel" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0" Margin="0,10,10,10">Character Name:</Label>
-        <TextBox Grid.Column="1" Grid.Row="0" Margin="5,10,10,10"/>
+        <TextBox Grid.Column="1" Grid.Row="0" Margin="5,10,10,10" Name="Charactername"/>
         <!--Level-->
         <Label Name="CharacterLevelLabel" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" Margin="0,10">Character Level:</Label>
-        <TextBox Grid.Column="1" Grid.Row="1" Margin="5,10,10,10" />
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="5,10,10,10" Name="CharacterLevel" />
         <!--Faction-->
         <Label Name="CharacterFactionLabel" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="2" Margin="0,10">Character Faction:</Label>
         <ComboBox Grid.Column="1" Grid.Row="2" Margin="5,10,10,10" Name="FactionTypes" DisplayMemberPath="FactionString" SelectedValue="{Binding Factions, Mode=TwoWay}" />

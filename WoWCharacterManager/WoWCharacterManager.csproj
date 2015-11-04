@@ -60,6 +60,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\MainWindowVm.cs" />
     <Compile Include="Views\Character.xaml.cs">
       <DependentUpon>Character.xaml</DependentUpon>
     </Compile>
@@ -99,6 +100,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\DataSources\CharacterManagerService.CompositeType.datasource" />
+    <None Include="Properties\DataSources\CharacterManagerService.Models.CharacterData.datasource" />
     <None Include="Properties\DataSources\CharacterManagerService.Models.Class.datasource" />
     <None Include="Properties\DataSources\CharacterManagerService.Models.Faction.datasource" />
     <None Include="Properties\DataSources\CharacterManagerService.Models.Race.datasource" />

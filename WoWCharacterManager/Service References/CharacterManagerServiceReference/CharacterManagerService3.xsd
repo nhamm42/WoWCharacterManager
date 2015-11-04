@@ -40,4 +40,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Class" nillable="true" type="tns:Class" />
+  <xs:complexType name="CharacterData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Class" nillable="true" type="tns:Class" />
+      <xs:element minOccurs="0" name="Faction" nillable="true" type="tns:Faction" />
+      <xs:element minOccurs="0" name="Level" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Race" nillable="true" type="tns:Race" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CharacterData" nillable="true" type="tns:CharacterData" />
+  <xs:complexType name="ArrayOfCharacterData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CharacterData" nillable="true" type="tns:CharacterData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCharacterData" nillable="true" type="tns:ArrayOfCharacterData" />
 </xs:schema>

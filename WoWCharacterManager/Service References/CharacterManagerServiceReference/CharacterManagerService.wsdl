@@ -38,6 +38,12 @@
   <wsdl:message name="ICharacterManagerService_GetClasses_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetClassesResponse" />
   </wsdl:message>
+  <wsdl:message name="ICharacterManagerService_SubmitCharacterData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitCharacterData" />
+  </wsdl:message>
+  <wsdl:message name="ICharacterManagerService_SubmitCharacterData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitCharacterDataResponse" />
+  </wsdl:message>
   <wsdl:portType name="ICharacterManagerService">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/ICharacterManagerService/GetData" message="tns:ICharacterManagerService_GetData_InputMessage" />
@@ -58,6 +64,10 @@
     <wsdl:operation name="GetClasses">
       <wsdl:input wsaw:Action="http://tempuri.org/ICharacterManagerService/GetClasses" message="tns:ICharacterManagerService_GetClasses_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ICharacterManagerService/GetClassesResponse" message="tns:ICharacterManagerService_GetClasses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCharacterData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICharacterManagerService/SubmitCharacterData" message="tns:ICharacterManagerService_SubmitCharacterData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICharacterManagerService/SubmitCharacterDataResponse" message="tns:ICharacterManagerService_SubmitCharacterData_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ICharacterManagerService" type="tns:ICharacterManagerService">
@@ -100,6 +110,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetClasses">
       <soap:operation soapAction="http://tempuri.org/ICharacterManagerService/GetClasses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitCharacterData">
+      <soap:operation soapAction="http://tempuri.org/ICharacterManagerService/SubmitCharacterData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using CharacterManagerService.Models;
 using WoWCharacterManager.CharacterManagerServiceReference;
 
@@ -68,9 +69,18 @@ namespace WoWCharacterManager.Views
 
         private void btn_SubmitCharacter(object sender, RoutedEventArgs routedEventArgs)
         {
+            var submitCharacter = new CharacterData
+            {
+                Name = Charactername.Text,
+                Level = Convert.ToInt32(CharacterLevel.Text),
+                Faction = (Faction)FactionTypes.SelectionBoxItem,
+                Race = (Race)RaceTypes.SelectionBoxItem,
+                Class = (Class)ClassTypes.SelectionBoxItem
+            };
+
             using (var client = new CharacterManagerServiceClient())
             {
-                //todo add submit to service for character info
+                var result = client.SubmitCharacterData(submitCharacter);
             }
         }
 
