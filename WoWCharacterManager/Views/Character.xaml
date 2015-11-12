@@ -23,13 +23,22 @@
         <TextBox Grid.Column="1" Grid.Row="1" Margin="5,10,10,10" Name="CharacterLevel" />
         <!--Faction-->
         <Label Name="CharacterFactionLabel" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="2" Margin="0,10">Character Faction:</Label>
-        <ComboBox Grid.Column="1" Grid.Row="2" Margin="5,10,10,10" Name="FactionTypes" DisplayMemberPath="FactionString" SelectedValue="{Binding Factions, Mode=TwoWay}" />
+        <ComboBox 
+            Grid.Column="1" 
+            Grid.Row="2" 
+            Margin="5,10,10,10" 
+            Name="FactionTypes" 
+            ItemsSource="{Binding Factions}" 
+            DisplayMemberPath="FactionString" 
+            SelectedValue="{Binding Factions, Mode=TwoWay}"
+            SelectedValuePath="FactionId"
+            IsSynchronizedWithCurrentItem="True"/>
         <!--Race-->
         <Label Name="CharacterRaceLabel" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="3" Margin="0,10" RenderTransformOrigin="0.504,-0.208">Character Race:</Label>
-        <ComboBox Grid.Column="1" Grid.Row="3" Margin="5,10,10,10" Name="RaceTypes" DisplayMemberPath="RaceString" SelectedValue="{Binding Races, Mode=TwoWay}"/>
+        <ComboBox Grid.Column="1" Grid.Row="3" Margin="5,10,10,10" Name="RaceTypes" ItemsSource="{Binding Races}" DisplayMemberPath="RaceString" SelectedItem="{Binding Races, Mode=TwoWay}"/>
         <!--Class-->
         <Label Name="CharacterClassLabel" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="4" Margin="0,10,0,9">Character Class:</Label>
-        <ComboBox Grid.Column="1" Grid.Row="4" Margin="5,10,10,10" Name="ClassTypes" DisplayMemberPath="ClassString" SelectedValue="{Binding Classes, Mode=TwoWay}"/>
+        <ComboBox Grid.Column="1" Grid.Row="4" Margin="5,10,10,10" Name="ClassTypes" ItemsSource="{Binding Classes}" DisplayMemberPath="ClassString" SelectedItem="{Binding Classes, Mode=TwoWay}"/>
 
         <Button Name="SubmitCharacter" Grid.Column="0" Grid.Row="5" Margin="5,10,10,10" Content="Add" Click="btn_SubmitCharacter"/>
         <Button Name="Cancel" Grid.Column="1" Grid.Row="5" Margin="69,10,10,10" Content="Cancel" Click="btn_Cancel" />

@@ -34,16 +34,22 @@ namespace WoWCharacterManager.CharacterManagerServiceReference {
         System.Threading.Tasks.Task<CharacterManagerService.Models.Faction[]> GetFactionsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICharacterManagerService/GetRaces", ReplyAction="http://tempuri.org/ICharacterManagerService/GetRacesResponse")]
-        CharacterManagerService.Models.Race[] GetRaces();
+        CharacterManagerService.Models.Race[] GetRaces(int factionId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICharacterManagerService/GetRaces", ReplyAction="http://tempuri.org/ICharacterManagerService/GetRacesResponse")]
-        System.Threading.Tasks.Task<CharacterManagerService.Models.Race[]> GetRacesAsync();
+        System.Threading.Tasks.Task<CharacterManagerService.Models.Race[]> GetRacesAsync(int factionId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICharacterManagerService/GetClasses", ReplyAction="http://tempuri.org/ICharacterManagerService/GetClassesResponse")]
         CharacterManagerService.Models.Class[] GetClasses();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICharacterManagerService/GetClasses", ReplyAction="http://tempuri.org/ICharacterManagerService/GetClassesResponse")]
         System.Threading.Tasks.Task<CharacterManagerService.Models.Class[]> GetClassesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICharacterManagerService/GetCharacterList", ReplyAction="http://tempuri.org/ICharacterManagerService/GetCharacterListResponse")]
+        CharacterManagerService.Models.CharacterData[] GetCharacterList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICharacterManagerService/GetCharacterList", ReplyAction="http://tempuri.org/ICharacterManagerService/GetCharacterListResponse")]
+        System.Threading.Tasks.Task<CharacterManagerService.Models.CharacterData[]> GetCharacterListAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICharacterManagerService/SubmitCharacterData", ReplyAction="http://tempuri.org/ICharacterManagerService/SubmitCharacterDataResponse")]
         CharacterManagerService.Models.CharacterData[] SubmitCharacterData(CharacterManagerService.Models.CharacterData submitCharacter);
@@ -103,12 +109,12 @@ namespace WoWCharacterManager.CharacterManagerServiceReference {
             return base.Channel.GetFactionsAsync();
         }
         
-        public CharacterManagerService.Models.Race[] GetRaces() {
-            return base.Channel.GetRaces();
+        public CharacterManagerService.Models.Race[] GetRaces(int factionId) {
+            return base.Channel.GetRaces(factionId);
         }
         
-        public System.Threading.Tasks.Task<CharacterManagerService.Models.Race[]> GetRacesAsync() {
-            return base.Channel.GetRacesAsync();
+        public System.Threading.Tasks.Task<CharacterManagerService.Models.Race[]> GetRacesAsync(int factionId) {
+            return base.Channel.GetRacesAsync(factionId);
         }
         
         public CharacterManagerService.Models.Class[] GetClasses() {
@@ -117,6 +123,14 @@ namespace WoWCharacterManager.CharacterManagerServiceReference {
         
         public System.Threading.Tasks.Task<CharacterManagerService.Models.Class[]> GetClassesAsync() {
             return base.Channel.GetClassesAsync();
+        }
+        
+        public CharacterManagerService.Models.CharacterData[] GetCharacterList() {
+            return base.Channel.GetCharacterList();
+        }
+        
+        public System.Threading.Tasks.Task<CharacterManagerService.Models.CharacterData[]> GetCharacterListAsync() {
+            return base.Channel.GetCharacterListAsync();
         }
         
         public CharacterManagerService.Models.CharacterData[] SubmitCharacterData(CharacterManagerService.Models.CharacterData submitCharacter) {

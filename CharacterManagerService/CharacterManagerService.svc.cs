@@ -44,85 +44,95 @@ namespace CharacterManagerService
             return factions;
         }
 
-        public List<Race> GetRaces()
+        public List<Race> GetRaces(int factionId)
         {
-            var races = new List<Race>
+            var races = new List<Race>();
+
+            if (factionId == 1) //Horde
             {
-                //Horde
-                new Race
+                races = new List<Race>
                 {
-                    FactionId = 1,
-                    RaceId = 1,
-                    RaceString = "Orc"
-                },
-                new Race
+                    new Race
+                    {
+                        FactionId = 1,
+                        RaceId = 1,
+                        RaceString = "Orc"
+                    },
+                    new Race
+                    {
+                        FactionId = 1,
+                        RaceId = 2,
+                        RaceString = "Troll"
+                    },
+                    new Race
+                    {
+                        FactionId = 1,
+                        RaceId = 3,
+                        RaceString = "Undead"
+                    },
+                    new Race
+                    {
+                        FactionId = 1,
+                        RaceId = 4,
+                        RaceString = "Tauren"
+                    },
+                    new Race
+                    {
+                        FactionId = 1,
+                        RaceId = 5,
+                        RaceString = "Blood Elf"
+                    },
+                    new Race
+                    {
+                        FactionId = 1,
+                        RaceId = 5,
+                        RaceString = "Goblin"
+                    }
+                };
+            }
+            if (factionId == 2) //Alliance
+            {
+                races = new List<Race>
                 {
-                    FactionId = 1,
-                    RaceId = 2,
-                    RaceString = "Troll"
-                },
-                new Race
-                {
-                    FactionId = 1,
-                    RaceId = 3,
-                    RaceString = "Undead"
-                },
-                new Race
-                {
-                    FactionId = 1,
-                    RaceId = 4,
-                    RaceString = "Tauren"
-                },
-                new Race
-                {
-                    FactionId = 1,
-                    RaceId = 5,
-                    RaceString = "Blood Elf"
-                },
-                new Race
-                {
-                    FactionId = 1,
-                    RaceId = 5,
-                    RaceString = "Goblin"
-                },
-                //Alliance
-                new Race
-                {
-                    FactionId = 2,
-                    RaceId = 6,
-                    RaceString = "Human"
-                },
-                new Race
-                {
-                    FactionId = 2,
-                    RaceId = 7,
-                    RaceString = "Dwarf"
-                },
-                new Race
-                {
-                    FactionId = 2,
-                    RaceId = 8,
-                    RaceString = "Gnome"
-                },
-                new Race
-                {
-                    FactionId = 2,
-                    RaceId = 9,
-                    RaceString = "Night Elf"
-                },
-                new Race
-                {
-                    FactionId = 2,
-                    RaceId = 10,
-                    RaceString = "Worgen"
-                },
-                new Race
-                {
-                    FactionId = 3,
-                    RaceId = 11,
-                    RaceString = "Pandaren"
-                }
-            };
+                    new Race
+                    {
+                        FactionId = 2,
+                        RaceId = 6,
+                        RaceString = "Human"
+                    },
+                    new Race
+                    {
+                        FactionId = 2,
+                        RaceId = 7,
+                        RaceString = "Dwarf"
+                    },
+                    new Race
+                    {
+                        FactionId = 2,
+                        RaceId = 8,
+                        RaceString = "Gnome"
+                    },
+                    new Race
+                    {
+                        FactionId = 2,
+                        RaceId = 9,
+                        RaceString = "Night Elf"
+                    },
+                    new Race
+                    {
+                        FactionId = 2,
+                        RaceId = 10,
+                        RaceString = "Worgen"
+                    },
+                    new Race
+                    {
+                        FactionId = 3,
+                        RaceId = 11,
+                        RaceString = "Pandaren"
+                    }
+                };
+            }
+
             return races;
         }
 
@@ -188,6 +198,11 @@ namespace CharacterManagerService
             };
             return classes;
         }
+
+        public List<CharacterData> GetCharacterList()
+        {
+            return _characterList;
+        } 
 
         public List<CharacterData> SubmitCharacterData(CharacterData submitCharacter)
         {

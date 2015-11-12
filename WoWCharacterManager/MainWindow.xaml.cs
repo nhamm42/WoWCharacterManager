@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using CharacterManagerService.Models;
 using WoWCharacterManager.ViewModels;
 using WoWCharacterManager.Views;
 
@@ -13,7 +14,11 @@ namespace WoWCharacterManager
         {
             InitializeComponent();
             DataContext = new MainWindowVm();
+            CharacterList = MainWindowVm.Characters;
         }
+
+        public CharacterData[] CharacterList { get; set; }
+
 
         private void CreateCharacter(object sender, RoutedEventArgs e)
         {

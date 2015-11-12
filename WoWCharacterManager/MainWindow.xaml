@@ -66,22 +66,22 @@
                     <TableRowGroup>
                         <TableRow>
                             <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black">Verikai</Paragraph>
+                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black">Level</Paragraph>
+                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black">Faction</Paragraph>
+                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black">Race</Paragraph>
+                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black">Class</Paragraph>
+                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
                             </TableCell>
                             <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black">Remove</Paragraph>
+                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
                             </TableCell>
                         </TableRow>
                     </TableRowGroup>

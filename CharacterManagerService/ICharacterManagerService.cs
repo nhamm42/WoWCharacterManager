@@ -19,10 +19,13 @@ namespace CharacterManagerService
         List<Faction> GetFactions();
 
         [OperationContract]
-        List<Race> GetRaces();
+        List<Race> GetRaces(int factionId);
 
         [OperationContract]
         List<Class> GetClasses();
+
+        [OperationContract]
+        List<CharacterData> GetCharacterList();
 
         [OperationContract]
         List<CharacterData> SubmitCharacterData(CharacterData submitCharacter);
