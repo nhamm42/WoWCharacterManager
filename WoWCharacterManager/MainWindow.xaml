@@ -22,71 +22,14 @@
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" Text="WoW Character Manager" FontSize="36" TextAlignment="Center">
             <TextBlock.Effect>
                 <DropShadowEffect Opacity="0.8"/>
-            </TextBlock.Effect></TextBlock>
+            </TextBlock.Effect>
+        </TextBlock>
         <Button Grid.Row="1" Grid.Column="0" Content="Add New Character"
 		HorizontalAlignment="Left"
 		Margin="10,22,0,0"
 		VerticalAlignment="Top"
 		Width="125"
         Click="CreateCharacter" Height="33" Grid.ColumnSpan="2"/>
-        <FlowDocumentPageViewer Grid.Row="2" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="6">
-            <FlowDocument>
-                <Table>
-                    <Table.Columns>
-                        <TableColumn/>
-                        <TableColumn/>
-                        <TableColumn/>
-                        <TableColumn/>
-                        <TableColumn/>
-                        <TableColumn/>
-                    </Table.Columns>
-                    <TableRowGroup>
-                        <TableRow Background="Navy">
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="White">Name</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="White">Level</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="White">Faction</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="White">Race</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="White">Class</Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="White">Remove</Paragraph>
-                            </TableCell>
-                        </TableRow>
-                    </TableRowGroup>
-                    
-                    <TableRowGroup>
-                        <TableRow>
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
-                            </TableCell>
-                            <TableCell>
-                                <Paragraph FontSize="14" FontWeight="Bold" Foreground="Black"></Paragraph>
-                            </TableCell>
-                        </TableRow>
-                    </TableRowGroup>
-                </Table>
-            </FlowDocument>
-        </FlowDocumentPageViewer>
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="{Binding CharacterList}"></TextBlock>
     </Grid>
 </Window>

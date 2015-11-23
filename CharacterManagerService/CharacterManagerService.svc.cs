@@ -199,16 +199,16 @@ namespace CharacterManagerService
             return classes;
         }
 
-        public List<CharacterData> GetCharacterList()
-        {
-            return _characterList;
-        } 
-
         public List<CharacterData> SubmitCharacterData(CharacterData submitCharacter)
         {
             _characterList.Add(submitCharacter);
 
             return _characterList;
         }
+
+        public List<CharacterData> GetCharacterList()
+        {
+            return _characterList;
+        } 
     }
 }

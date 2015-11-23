@@ -1,4 +1,5 @@
 ﻿using CharacterManagerService.Models;
+using WoWCharacterManager.CharacterManagerServiceReference;
 
 namespace WoWCharacterManager.ViewModels
 {
@@ -6,9 +7,13 @@ namespace WoWCharacterManager.ViewModels
     {
         public static CharacterData[] Characters;
 
-        public static void GetCharacterList(CharacterData[] characterList)
+        public static void GetCharacterList()
         {
-            Characters = characterList;
+            using (var client = new CharacterManagerServiceClient())
+            {
+                Characters = client.GetCharacterList();
+            }
+            //Characters = characterList;
         }
     }
 }

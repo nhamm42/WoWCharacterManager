@@ -30,12 +30,13 @@ namespace WoWCharacterManager.Views
                 Class = (Class)ClassTypes.SelectedItem
             };
 
-            CharacterData[] characterList;
             using (var client = new CharacterManagerServiceClient())
             {
-               characterList = client.SubmitCharacterData(submitCharacter);
+               client.SubmitCharacterData(submitCharacter);
             }
-            MainWindowVm.GetCharacterList(characterList);
+            MainWindowVm.GetCharacterList();
+
+            Close();
         }
 
         private void btn_Cancel(object sender, RoutedEventArgs routedEventArgs)
