@@ -32,9 +32,10 @@ namespace WoWCharacterManager.Views
 
             using (var client = new CharacterManagerServiceClient())
             {
-               client.SubmitCharacterData(submitCharacter);
+                client.SubmitCharacterData(submitCharacter);
+                MainWindowVm.GetCharacterList();
             }
-            MainWindowVm.GetCharacterList();
+            
 
             Close();
         }
